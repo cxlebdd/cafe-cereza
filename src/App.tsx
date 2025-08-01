@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import { useState, useEffect } from "react";
 
 export default function App() {
+  const [scrolled, setScrolled] = useState(false); // <-- aquí
 
   useEffect(() => {
     function onScroll() {
@@ -18,12 +19,11 @@ export default function App() {
 
   return (
     <div className="font-sans text-gray-800 bg-[#FAF5E4] min-h-screen flex flex-col">
-      
       {/* Hero */}
       <Hero />
 
       {/* Navbar */}
-      <Navbar />
+      <Navbar scrolled={scrolled} /> {/* Le pasas scrolled como prop */}
 
       {/* Menú Destacado */}
       <Menu />
@@ -33,7 +33,6 @@ export default function App() {
 
       {/* Footer */}
       <Footer />
-
     </div>
   );
 }
