@@ -16,3 +16,15 @@
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
+
+/* Duración por defecto (para móviles): 19s */
+.duration-10s {
+  animation-duration: 5s;
+}
+
+/* En pantallas grandes (desde 640px): 35s */
+@media (min-width: 640px) {
+  .duration-10s {
+    animation-duration: 25s;
+  }
+}

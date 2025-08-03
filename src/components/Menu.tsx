@@ -35,9 +35,7 @@ export default function Menu() {
 
       <div className="relative overflow-hidden">
         <div
-          className="flex gap-6 animate-scroll whitespace-nowrap px-6"
-          style={{ animationDuration: "50s" }}
-        >
+          className="flex gap-6 animate-scroll whitespace-nowrap duration-10s px-6">
           {[...products, ...products].map((product, index) => (
             <div
               key={product._id + index}
