@@ -13,7 +13,7 @@ type Product = {
   tags?: string[];
 };
 
-const navItems = ["Inicio", "Menu", "Ubicacion"];
+const navItems = ["Inicio", "Menú", "Ubicación"];
 
 const navItemVariants: Variants = {
   hidden: { opacity: 0, y: -10 },
@@ -293,13 +293,15 @@ export default function App() {
           transition={{ duration: 1.2, ease: "easeOut" }}
           style={{ maxHeight: "400px" }}
         >
-          <img
-            src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=90"
-            alt="Barista preparando café con arte latte"
-            className="object-cover w-full h-full"
-            loading="lazy"
-            draggable={false}
-          />
+          <div className="w-full h-[350px] relative">
+            <img
+              src="/pared.jpg"
+              className="object-cover w-full h-full"
+              loading="lazy"
+              draggable={false}
+            />
+          </div>
+
           <div className="absolute inset-0 bg-black/60 pointer-events-none" />
           <motion.div
             className="absolute top-24 left-24 w-24 h-44 bg-gradient-to-t from-white/40 to-transparent rounded-full blur-3xl opacity-40"
@@ -316,18 +318,17 @@ export default function App() {
               delay: 1,
             }}
           />
-          <CoffeeParticles />
         </motion.div>
       </section>
 
       {/* MENÚ */}
       <section
-        id="menu"
+        id="menú"
         className="max-w-6xl mx-auto px-6 md:px-10 py-20"
         aria-label="Menú de productos"
       >
         <h2 className="text-center text-[#d8a47f] text-4xl font-extrabold mb-6 tracking-wide drop-shadow-md select-none">
-          Nuestro Menú
+          Menú
         </h2>
         <span className="block h-1 w-24 bg-red-500 mx-auto mb-10 rounded-full shadow-lg" />
 
@@ -391,7 +392,7 @@ export default function App() {
         className="max-w-6xl mx-auto px-6 md:px-10 py-20"
       >
         <h2 className="text-center text-[#d8a47f] text-4xl font-extrabold mb-6 tracking-wide drop-shadow-md select-none">
-          Testimonios
+          Opiniones
         </h2>
         <span className="block h-1 w-24 bg-red-500 mx-auto mb-12 rounded-full shadow-lg" />
 
@@ -437,7 +438,7 @@ export default function App() {
 
       {/* MAPA GOOGLE */}
       <section
-        id="ubicacion"
+        id="ubicación"
         className="max-w-7xl mx-auto px-6 md:px-12 mt-24 mb-16 rounded-lg overflow-hidden shadow-lg"
         aria-label="Ubicación de la cafetería"
       >
